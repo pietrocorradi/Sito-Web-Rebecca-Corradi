@@ -134,7 +134,7 @@
   </section>
 </div>
 
-<!-- CONTATTI -->
+-- CONTATTI -->
 <div class="page" id="p-contatti">
   <div class="pagehead" style="position:relative;overflow:hidden">
     <span class="logo-slot deco" style="width:180px;height:180px;right:5%;top:-20px;opacity:.16;transform:rotate(8deg)"></span>
@@ -148,18 +148,19 @@
           <h2>Prendiamoci un momento</h2>
           <p>Scrivimi per fissare un primo colloquio o per ricevere maggiori informazioni. Ti risponderò il prima possibile.</p>
           <p>📞 <span>+39 345 835 1274</span></p>
-          <p>✉️ <span>nome@esempio.it</span></p>
+          <p>✉️ <span>Rebecca@esempio.it</span></p>
           <p>📍 <span>Via P. Mascagni 6, Luserna San Giovanni (TO)</span></p>
-          <p>📍 <span>Via Esempio 1, Città (e online)</span></p>
           <p>📍 <span>Online</span></p>
         </div>
-        <form class="card" id="form">
-          <label for="n">Nome</label><input id="n" required>
-          <label for="e">Email</label><input id="e" type="email" required>
-          <label for="m">Messaggio</label><textarea id="m" rows="5" required></textarea>
-          <p style="margin-top:14px;font-size:.85rem;color:var(--muted)">Inviando accetti il trattamento dei dati per rispondere alla tua richiesta.</p>
-          <button class="btn" type="submit">Invia messaggio</button>
-        </form>
+        <div class="card" style="text-align:center">
+          <h3>Preferisci scrivermi su WhatsApp?</h3>
+          <p>Un clic e si apre la chat con un messaggio già pronto: puoi modificarlo prima di inviarlo.</p>
+          <a class="btn" style="display:inline-flex;align-items:center;gap:10px" target="_blank" rel="noopener noreferrer"
+             href="https://wa.me/393458351274?text=Ciao%20Rebecca%2C%20vorrei%20ricevere%20informazioni%20sul%20percorso%20di%20counseling%20e%20fissare%20un%20primo%20colloquio.%20Grazie!">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.5-4.5A8.5 8.5 0 1 1 8 19.5z"/><path d="M9 8.5c0 3 3 6 6 6l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z"/></svg>
+            Scrivimi su WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -213,11 +214,6 @@ function route(){
 }
 window.addEventListener('hashchange',route);route();
 
-document.getElementById('form').addEventListener('submit',function(e){
-  e.preventDefault();
-  var n=document.getElementById('n').value,em=document.getElementById('e').value,m=document.getElementById('m').value;
-  location.href='mailto:nome@esempio.it?subject='+encodeURIComponent('Richiesta di contatto da '+n)+'&body='+encodeURIComponent(m+'\n\n'+n+' – '+em);
-});
 </script>
 </body>
 </html>
